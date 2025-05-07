@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Find Trip</string>
+    <string name="app_logo">FindTrip Logo</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="login">Log in</string>
+    <string name="continue_with_apple">Continue with Apple</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="or">Or</string>
+    <string name="back_button">Back</string>
+    <string name="toggle_password_visibility">Toggle password visibility</string>
+</resources>
