@@ -35,7 +35,8 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <!-- Back Button -->
 
@@ -51,7 +52,8 @@
         android:contentDescription="@string/back_button"
         android:src="@drawable/icon_back_white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -69,7 +71,8 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <!-- Password Visibility Toggle -->
     <ImageButton
@@ -82,7 +85,8 @@
         android:src="@drawable/icon_visibility"
         app:layout_constraintBottom_toBottomOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="@+id/etPassword"
-        app:layout_constraintTop_toTopOf="@+id/etPassword" />
+        app:layout_constraintTop_toTopOf="@+id/etPassword"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <!-- Forgot Password Link -->
     <TextView
@@ -167,7 +171,8 @@
             android:layout_marginBottom="20dp"
             android:background="#F2F2F2"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="TouchTargetSizeCheck">
 
             <ImageView
                 android:id="@+id/ivAppleLogo"
@@ -199,7 +204,8 @@
             android:layout_marginBottom="20dp"
             android:background="#F2F2F2"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="TouchTargetSizeCheck">
 
             <ImageView
                 android:id="@+id/ivFacebookLogo"
@@ -230,7 +236,8 @@
             android:layout_height="31dp"
             android:background="#F2F2F2"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="TouchTargetSizeCheck">
 
             <ImageView
                 android:id="@+id/ivGoogleLogo"

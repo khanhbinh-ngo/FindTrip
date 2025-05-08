@@ -1,6 +1,7 @@
 package com.example.findtrip;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -9,6 +10,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,9 +26,11 @@ public class SearchFilterActivity extends AppCompatActivity {
 
     // UI Components
     private MaterialButton btnPromo, btnHotels, btnExplore, btnFlights;
+
+    private TextView dollar, euro;
     private EditText searchEditText, minPriceEdit, maxPriceEdit;
     private EditText startDateEdit, endDateEdit;
-    private ImageView notificationIcon, homeIcon, favoritesIcon, cartIcon, profileIcon;
+    private ImageView notificationIcon, homeIcon, favoritesIcon, cartIcon, profileIcon, filterIcon;
     private CardView filterCardView;
     private ImageButton closeButton;
 
@@ -58,8 +62,12 @@ public class SearchFilterActivity extends AppCompatActivity {
         btnExplore = findViewById(R.id.btnExplore);
         btnFlights = findViewById(R.id.btnFlights);
 
+        dollar = findViewById(R.id.dollar);
+        euro = findViewById(R.id.euro);
+
         // Search field
         searchEditText = findViewById(R.id.searchEditText);
+        filterIcon = findViewById(R.id.filter);
 
         // Filter card elements
         filterCardView = findViewById(R.id.filterCardView);
@@ -92,6 +100,7 @@ public class SearchFilterActivity extends AppCompatActivity {
         // Price field listeners
         setupPriceFields();
 
+
         // Close button for filter card
         closeButton.setOnClickListener(v -> filterCardView.setVisibility(View.GONE));
 
@@ -100,6 +109,33 @@ public class SearchFilterActivity extends AppCompatActivity {
 
         // Notification icon listener
         notificationIcon.setOnClickListener(v -> showNotifications());
+
+        filterIcon.setOnClickListener(v -> filterCardView.setVisibility(View.VISIBLE));
+
+
+        dollar.setOnClickListener(v -> {
+            switchToDollarFilter();
+        });
+
+        euro.setOnClickListener(v -> {
+            switchToEuroFilter();
+        });
+
+
+    }
+    private void switchToDollarFilter() {
+        minPriceEdit.setHint("Min ($)");
+        maxPriceEdit.setHint("Max ($)");
+        Toast.makeText(this, "Đang dùng đơn vị Dollar", Toast.LENGTH_SHORT).show();
+        filterCardView.setVisibility(View.VISIBLE);
+    }
+
+    private void switchToEuroFilter() {
+        minPriceEdit.setHint("Min (€)");
+        maxPriceEdit.setHint("Max (€)");
+        Toast.makeText(this, "Đang dùng đơn vị Euro", Toast.LENGTH_SHORT).show();
+        filterCardView.setVisibility(View.VISIBLE);
+
     }
 
     private void setupCategoryButtons() {
@@ -229,7 +265,7 @@ public class SearchFilterActivity extends AppCompatActivity {
     // Content loading methods
     private void loadPromoContent() {
         // Hide filter card for promo section
-        filterCardView.setVisibility(View.GONE);
+        filterCardView.setVisibility(View.VISIBLE);
         Toast.makeText(this, "Loading Promotions", Toast.LENGTH_SHORT).show();
         // TODO: Load promotion content
     }
@@ -241,14 +277,14 @@ public class SearchFilterActivity extends AppCompatActivity {
 
     private void loadExploreContent() {
         // Hide filter card for explore section
-        filterCardView.setVisibility(View.GONE);
+        filterCardView.setVisibility(View.VISIBLE);
         Toast.makeText(this, "Loading Explore", Toast.LENGTH_SHORT).show();
         // TODO: Load explore content
     }
 
     private void loadFlightsContent() {
         // Hide filter card for flights section
-        filterCardView.setVisibility(View.GONE);
+        filterCardView.setVisibility(View.VISIBLE);
         Toast.makeText(this, "Loading Flights", Toast.LENGTH_SHORT).show();
         // TODO: Load flights content
     }
@@ -311,17 +347,16 @@ public class SearchFilterActivity extends AppCompatActivity {
 
     private void navigateToFavorites() {
         Toast.makeText(this, "Favorites", Toast.LENGTH_SHORT).show();
-        // TODO: Navigate to favorites screen
+        Intent intent = new Intent(this, FavoriteActivity.class);
+        startActivity(intent);
     }
 
     private void navigateToCart() {
         Toast.makeText(this, "Cart", Toast.LENGTH_SHORT).show();
-        // TODO: Navigate to cart screen
     }
 
     private void navigateToProfile() {
         Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
-        // TODO: Navigate to profile screen
     }
 
     private void showNotifications() {

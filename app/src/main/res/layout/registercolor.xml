@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#125642"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
     <!-- Logo -->
 
@@ -37,7 +37,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -55,7 +56,8 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+        app:layout_constraintTop_toBottomOf="@+id/etName"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <!-- Back Button -->
 
@@ -89,7 +91,8 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <!-- Password Visibility Toggle -->
 
@@ -110,7 +113,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
     <!-- Login Button -->
@@ -129,7 +133,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="@+id/etPassword"
         app:layout_constraintTop_toTopOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btnRegister"
@@ -201,7 +206,8 @@
             android:layout_marginBottom="20dp"
             android:background="#F2F2F2"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="TouchTargetSizeCheck">
 
             <ImageView
                 android:id="@+id/ivAppleLogo"
@@ -233,7 +239,8 @@
             android:layout_marginBottom="20dp"
             android:background="#F2F2F2"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="TouchTargetSizeCheck">
 
             <ImageView
                 android:id="@+id/ivFacebookLogo"
@@ -264,7 +271,8 @@
             android:layout_height="31dp"
             android:background="#F2F2F2"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="TouchTargetSizeCheck">
 
             <ImageView
                 android:id="@+id/ivGoogleLogo"

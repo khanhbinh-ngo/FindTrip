@@ -30,12 +30,14 @@ public class FavoriteActivity extends AppCompatActivity {
 
         // Xử lý sự kiện click nút back
         btnBack.setOnClickListener(view -> {
-            onBackPressed(); // Trở về màn hình trước đó
+            finish(); // Trở về màn hình trước đó
         });
 
         // Xử lý sự kiện click biểu tượng thông báo
         notificationIcon.setOnClickListener(view -> {
-            Toast.makeText(this, "Bạn có 3 thông báo mới", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Bạn có thông báo mới", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, Notification.class);
+            startActivity(intent);
         });
 
         // Xử lý sự kiện click ở thanh điều hướng dưới

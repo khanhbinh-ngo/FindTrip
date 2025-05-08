@@ -27,7 +27,7 @@ public class Notification extends AppCompatActivity {
 
     private void initUI() {
         // Xử lý sự kiện nút back
-        ImageButton backButton = findViewById(R.id.backButton);
+        ImageView backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> finish());
 
         // Xử lý sự kiện nút thông báo

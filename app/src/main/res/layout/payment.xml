@@ -43,7 +43,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="30dp"
-            android:hint="Card Number" />
+            android:hint="Card Number"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cardholder"
@@ -51,7 +52,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="30dp"
-            android:hint="Card Holder" />
+            android:hint="Card Holder"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,7 +67,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Expiry Date" />
+                android:hint="Expiry Date"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <Space android:layout_width="20dp" android:layout_height="wrap_content" />
 
@@ -74,7 +77,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="CVA/VCC" />
+                android:hint="CVA/VCC"
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
         <CheckBox
@@ -109,7 +113,7 @@
             android:layout_marginHorizontal="30dp"
             android:text="Cancel"
             android:textColor="@color/emerald"
-            android:background="@drawable/button_border"/>
+            android:backgroundTint="#FFFFFF"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

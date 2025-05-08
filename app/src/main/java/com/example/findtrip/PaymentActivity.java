@@ -123,34 +123,33 @@ public class PaymentActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                String input = s.toString();
+                expiryDateEditText.removeTextChangedListener(this);
 
-                // Remove all non-digits
+                String input = s.toString();
                 String digits = input.replaceAll("\\D", "");
 
-                // Format as MM/YY
                 StringBuilder formatted = new StringBuilder();
 
-                if (digits.length() > 0) {
-                    // First two digits (month)
-                    String month = digits.substring(0, Math.min(2, digits.length()));
-                    formatted.append(month);
+                try {
+                    if (digits.length() >= 1) {
+                        formatted.append(digits.substring(0, Math.min(2, digits.length())));
+                    }
 
-                    // Add slash if we have two digits for month
                     if (digits.length() > 2) {
                         formatted.append("/");
-
-                        // Append year digits
                         formatted.append(digits.substring(2, Math.min(4, digits.length())));
-                    } else if (month.length() == 2 && !input.contains("/")) {
-                        // Auto-add slash after two month digits
-                        formatted.append("/");
                     }
+
+                    String result = formatted.toString();
+                    if (!result.equals(input)) {
+                        expiryDateEditText.setText(result);
+                        expiryDateEditText.setSelection(result.length());
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace(); // Log lỗi để debug
                 }
 
-                if (!formatted.toString().equals(input)) {
-                    s.replace(0, s.length(), formatted.toString());
-                }
+                expiryDateEditText.addTextChangedListener(this);
             }
         });
 
