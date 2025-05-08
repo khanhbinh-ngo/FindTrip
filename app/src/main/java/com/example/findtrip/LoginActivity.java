@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 // Thêm logic đăng nhập thực tế ở đây
                 Toast.makeText(this, "Logging in...", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, HomePageActivity.class);
                 startActivity(intent);
             }
         });
@@ -76,6 +76,8 @@ public class LoginActivity extends AppCompatActivity {
         // Xử lý forgot password
         tvForgotPassword.setOnClickListener(v -> {
             Toast.makeText(this, "Forgot password clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+            startActivity(intent);
             // Chuyển tới trang reset mật khẩu nếu có
         });
 

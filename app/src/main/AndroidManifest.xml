@@ -29,6 +29,12 @@
         <activity android:name=".Notification" />
         <activity android:name=".SearchFilterActivity" />
         <activity android:name=".PaymentActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".ConfirmCodeActivity" />
+        <activity android:name=".ConfirmPasswordActivity" />
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".MyAccountActivity" />
     </application>
 
 </manifest>
