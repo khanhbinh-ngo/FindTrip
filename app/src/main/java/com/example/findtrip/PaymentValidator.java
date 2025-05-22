@@ -2,16 +2,9 @@
 
 package com.example.findtrip;
 
-/**
- * Utility class for credit card validation
- */
 public class PaymentValidator {
 
-     /**
-     * Validates a credit card number using the Luhn algorithm
-     * @param cardNumber The card number to validate
-     * @return true if the card number is valid according to the Luhn algorithm
-     */
+
     public static boolean isValidCardNumber(String cardNumber) {
         // Remove any non-digit characters
         String digits = cardNumber.replaceAll("\\D", "");
@@ -43,11 +36,6 @@ public class PaymentValidator {
         return (sum % 10 == 0);
     }
 
-    /**
-     * Gets the card type based on the card number
-     * @param cardNumber The card number
-     * @return The card type (VISA, MASTERCARD, AMEX, etc.) or UNKNOWN
-     */
     public static CardType getCardType(String cardNumber) {
         // Remove any non-digit characters
         String digits = cardNumber.replaceAll("\\D", "");
@@ -66,9 +54,6 @@ public class PaymentValidator {
         }
     }
 
-    /**
-     * Enum representing credit card types
-     */
     public enum CardType {
         VISA,
         MASTERCARD,

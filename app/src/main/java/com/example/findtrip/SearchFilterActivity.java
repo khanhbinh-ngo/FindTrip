@@ -267,33 +267,28 @@ public class SearchFilterActivity extends AppCompatActivity {
         // Hide filter card for promo section
         filterCardView.setVisibility(View.VISIBLE);
         Toast.makeText(this, "Loading Promotions", Toast.LENGTH_SHORT).show();
-        // TODO: Load promotion content
     }
 
     private void loadHotelsContent() {
         Toast.makeText(this, "Loading Hotels", Toast.LENGTH_SHORT).show();
-        // TODO: Load hotels content
     }
 
     private void loadExploreContent() {
         // Hide filter card for explore section
         filterCardView.setVisibility(View.VISIBLE);
         Toast.makeText(this, "Loading Explore", Toast.LENGTH_SHORT).show();
-        // TODO: Load explore content
     }
 
     private void loadFlightsContent() {
         // Hide filter card for flights section
         filterCardView.setVisibility(View.VISIBLE);
         Toast.makeText(this, "Loading Flights", Toast.LENGTH_SHORT).show();
-        // TODO: Load flights content
     }
 
     // Filter methods
     private void performSearch(String query) {
         if (query.length() > 2) {
             // Only search when query is at least 3 characters
-            // TODO: Implement actual search logic
             Toast.makeText(this, "Searching for: " + query, Toast.LENGTH_SHORT).show();
         }
     }
@@ -313,7 +308,6 @@ public class SearchFilterActivity extends AppCompatActivity {
                 return;
             }
 
-            // TODO: Apply date filtering logic
             Toast.makeText(this, "Filtering by date range", Toast.LENGTH_SHORT).show();
 
         } catch (Exception e) {
@@ -331,7 +325,6 @@ public class SearchFilterActivity extends AppCompatActivity {
                 return;
             }
 
-            // TODO: Apply price filtering logic
             Toast.makeText(this, "Filtering by price range: $" + minPrice + " - $" + maxPrice, Toast.LENGTH_SHORT).show();
 
         } catch (NumberFormatException e) {
@@ -361,6 +354,5 @@ public class SearchFilterActivity extends AppCompatActivity {
 
     private void showNotifications() {
         Toast.makeText(this, "Notifications", Toast.LENGTH_SHORT).show();
-        // TODO: Show notifications panel or navigate to notifications screen
     }
 }

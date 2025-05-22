@@ -21,13 +21,11 @@ public class LoginAndSignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginandsignup);
 
-        // Ánh xạ các view từ layout
         imageView = findViewById(R.id.imageView);
         loginButton = findViewById(R.id.loginButton);
         signupButton = findViewById(R.id.signup_button);
         skipButton = findViewById(R.id.skipButton);
 
-        // Nút Đăng nhập
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,7 +35,6 @@ public class LoginAndSignupActivity extends AppCompatActivity {
             }
         });
 
-        // Nút Đăng ký
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,12 +44,11 @@ public class LoginAndSignupActivity extends AppCompatActivity {
             }
         });
 
-        // Nút Bỏ qua
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(LoginAndSignupActivity.this, "Skip Clicked", Toast.LENGTH_SHORT).show();
-                finish(); // Đóng màn LoginAndSignupActivity
+                finish();
             }
         });
     }

@@ -12,7 +12,6 @@ public class ConfirmPasswordActivity extends AppCompatActivity {
 
     private Button confirm;
 
-    private ImageView success;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +19,6 @@ public class ConfirmPasswordActivity extends AppCompatActivity {
         setContentView(R.layout.confirmpassword);
 
         confirm = findViewById(R.id.confirm);
-        success = findViewById(R.id.success);
-
         confirm.setOnClickListener(v -> {
             Intent intent = new Intent(ConfirmPasswordActivity.this, LoginActivity.class);
             startActivity(intent);

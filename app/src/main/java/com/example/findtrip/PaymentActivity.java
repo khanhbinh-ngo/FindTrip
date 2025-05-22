@@ -22,7 +22,6 @@ import java.util.Locale;
 
 public class PaymentActivity extends AppCompatActivity {
 
-    // UI Components
     private EditText cardNumberEditText;
     private EditText cardHolderEditText;
     private EditText expiryDateEditText;
@@ -37,13 +36,10 @@ public class PaymentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment);
 
-        // Initialize UI components
         initializeViews();
 
-        // Set up input validation
         setupInputValidation();
 
-        // Set up button click listeners
         setupButtonListeners();
     }
 
@@ -66,12 +62,10 @@ public class PaymentActivity extends AppCompatActivity {
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // Not needed
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // Not needed
             }
 
             @Override
@@ -82,7 +76,6 @@ public class PaymentActivity extends AppCompatActivity {
 
                 isFormatting = true;
 
-                // Remove all non-digits
                 String digits = s.toString().replaceAll("\\D", "");
 
                 // Limit to 16 digits
@@ -146,7 +139,7 @@ public class PaymentActivity extends AppCompatActivity {
                         expiryDateEditText.setSelection(result.length());
                     }
                 } catch (Exception e) {
-                    e.printStackTrace(); // Log lỗi để debug
+                    e.printStackTrace();
                 }
 
                 expiryDateEditText.addTextChangedListener(this);
@@ -267,8 +260,6 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private void processPayment() {
-        // Here you would typically send the payment details to your payment processor
-        // For this example, we'll just show a success message
 
         // Get card details
         String cardNumber = cardNumberEditText.getText().toString().replaceAll("\\s", "");
@@ -277,8 +268,6 @@ public class PaymentActivity extends AppCompatActivity {
         String cva = cvaEditText.getText().toString();
         boolean rememberCard = rememberCardCheckBox.isChecked();
 
-        // IMPORTANT: In a real app, you would never log or store complete card details!
-        // This is just for demonstration purposes.
 
         // Mask card number for display
         String maskedCardNumber = maskCardNumber(cardNumber);
@@ -291,8 +280,6 @@ public class PaymentActivity extends AppCompatActivity {
         // Show success message
         Toast.makeText(this, "Payment processed successfully!", Toast.LENGTH_LONG).show();
 
-        // Close the activity or navigate to confirmation screen
-        // In a real app, you might navigate to a receipt screen
         finish();
     }
 
@@ -302,11 +289,6 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private void saveCardDetails(String maskedCardNumber, String cardHolder, String expiryDate) {
-        // In a real app, you would securely store these details
-        // This could be in SharedPreferences with encryption or a secure storage solution
-
-        // For this example, we just log that we're saving the card
-        // (In a real app, you would use proper secure storage)
         System.out.println("Saving card: " + maskedCardNumber + ", " + cardHolder + ", " + expiryDate);
     }
 }

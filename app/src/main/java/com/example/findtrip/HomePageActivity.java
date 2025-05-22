@@ -30,13 +30,11 @@ public class HomePageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.homepage); // Replace with your actual layout file name
+        setContentView(R.layout.homepage);
 
-        // Search and filter
         searchBar = findViewById(R.id.searchBar);
         filterButton = findViewById(R.id.filterButton);
 
-        // Tab buttons
         promoButton = findViewById(R.id.promo);
         hotelsButton = findViewById(R.id.hotels);
         exploreButton = findViewById(R.id.explore);
@@ -48,19 +46,15 @@ public class HomePageActivity extends AppCompatActivity {
         ImageView profileIcon = findViewById(R.id.profileIcon);
 
 
-        // RecyclerView
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
 
-        // Bottom navigation
         setupBottomNavigation();
 
-        // Tab click listeners
         View.OnClickListener tabListener = v -> {
             Button selected = (Button) v;
             Toast.makeText(this, "Selected: " + selected.getText(), Toast.LENGTH_SHORT).show();
-            // TODO: Change content in recyclerView depending on selected tab
         };
 
         promoButton.setOnClickListener(tabListener);
@@ -70,30 +64,25 @@ public class HomePageActivity extends AppCompatActivity {
 
         homeIcon.setOnClickListener(v -> {
             Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show();
-            // TODO: Chuyển sang trang Home hoặc thực hiện logic
         });
 
         favoritesIcon.setOnClickListener(v -> {
             Toast.makeText(this, "Favorites clicked", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(HomePageActivity.this, FavoriteActivity.class);
             startActivity(intent);
-            // TODO: Chuyển sang mục yêu thích
         });
 
         cartIcon.setOnClickListener(v -> {
             Toast.makeText(this, "Cart clicked", Toast.LENGTH_SHORT).show();
-            // TODO: Chuyển sang giỏ hàng
         });
 
         profileIcon.setOnClickListener(v -> {
             Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(HomePageActivity.this, MyAccountActivity.class);
             startActivity(intent);
-            // TODO: Chuyển sang hồ sơ người dùng
         });
 
 
-        // Filter button
         filterButton.setOnClickListener(v ->
                 Toast.makeText(this, "Filter clicked", Toast.LENGTH_SHORT).show());
     }

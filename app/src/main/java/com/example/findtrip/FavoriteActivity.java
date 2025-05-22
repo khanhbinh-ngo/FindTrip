@@ -19,7 +19,6 @@ public class FavoriteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.favorites);
 
-        // Khởi tạo các view
         btnBack = findViewById(R.id.btnBack);
         notificationIcon = findViewById(R.id.notificationIcon);
 
@@ -28,22 +27,18 @@ public class FavoriteActivity extends AppCompatActivity {
         cartIcon = findViewById(R.id.cartIcon);
         profileIcon = findViewById(R.id.profileIcon);
 
-        // Xử lý sự kiện click nút back
         btnBack.setOnClickListener(view -> {
-            finish(); // Trở về màn hình trước đó
+            finish();
         });
 
-        // Xử lý sự kiện click biểu tượng thông báo
         notificationIcon.setOnClickListener(view -> {
             Toast.makeText(this, "Bạn có thông báo mới", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, Notification.class);
             startActivity(intent);
         });
 
-        // Xử lý sự kiện click ở thanh điều hướng dưới
         homeIcon.setOnClickListener(view -> {
             Toast.makeText(this, "Trang chủ", Toast.LENGTH_SHORT).show();
-            // startActivity(new Intent(this, HomeActivity.class)); nếu có
         });
 
         favoritesIcon.setOnClickListener(view -> {
@@ -58,6 +53,5 @@ public class FavoriteActivity extends AppCompatActivity {
             Toast.makeText(this, "Hồ sơ cá nhân", Toast.LENGTH_SHORT).show();
         });
 
-        // Nếu bạn muốn xử lý nút "See more" thì cần đặt `android:id` cho TextView đó để xử lý tương tự
     }
 }

@@ -90,8 +90,10 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registerUser();
-                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(intent);
+                if (true){
+                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -154,10 +156,6 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        // Show loading (could add a progress bar in layout)
-        // progressBar.setVisibility(View.VISIBLE);
-
-        // Simulate network delay for authentication
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -172,8 +170,6 @@ public class RegisterActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            // Hide loading
-                            // progressBar.setVisibility(View.GONE);
 
                             if (success) {
                                 Toast.makeText(RegisterActivity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
@@ -277,8 +273,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void simulateAppleLogin() {
         Toast.makeText(this, "Processing Apple login...", Toast.LENGTH_SHORT).show();
 
-        // In real app, implement Apple Sign-In SDK
-        // For now, just simulate with a dummy account
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -311,8 +306,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void simulateFacebookLogin() {
         Toast.makeText(this, "Processing Facebook login...", Toast.LENGTH_SHORT).show();
 
-        // In real app, implement Facebook SDK
-        // For now, just simulate with a dummy account
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -345,8 +339,6 @@ public class RegisterActivity extends AppCompatActivity {
     private void simulateGoogleLogin() {
         Toast.makeText(this, "Processing Google login...", Toast.LENGTH_SHORT).show();
 
-        // In real app, implement Google Sign-In SDK
-        // For now, just simulate with a dummy account
         new Thread(new Runnable() {
             @Override
             public void run() {

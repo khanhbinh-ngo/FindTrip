@@ -55,7 +55,6 @@ public class ResetPasswordActivity extends AppCompatActivity {
                 return;
             }
 
-            // TODO: Gọi API hoặc lưu mật khẩu mới vào database
             Toast.makeText(this, "Password reset successfully.", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, ConfirmPasswordActivity.class);
             startActivity(intent);

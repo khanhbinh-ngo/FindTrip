@@ -20,7 +20,7 @@
 
     <ImageView
         android:id="@+id/logoImage"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="80dp"
         android:src="@drawable/logo_emerald"
         app:layout_constraintStart_toStartOf="parent"
