@@ -281,14 +281,15 @@
         android:background="@color/emerald"
         android:orientation="horizontal"
         android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
         <ImageView
             android:id="@+id/homeIcon"
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_home_white"/>
+            android:src="@drawable/ic_home_white" />
 
         <ImageView
             android:id="@+id/favoritesIcon"

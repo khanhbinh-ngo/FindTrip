@@ -275,7 +275,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="24dp"
                         android:background="@color/emerald"
-                        android:lineSpacing="4dp"
+                        android:lineSpacingExtra="4dp"
                         android:text="Lorem ipsum dolor sit amet consectetur. Sit fames netus consectetur sit venenatis leo commodo. Eu orci imperdiet orci bibendum eu sed. Ullamcorper praesellus Maecenas justo diam nibh placerat mi. Eleifend tellus sed auctor viverra. Semper massa fringilla metus turpis."
                         android:textColor="#B0BEC5"
                         android:textSize="14sp" />

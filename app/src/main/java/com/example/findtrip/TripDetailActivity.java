@@ -137,12 +137,7 @@ public class TripDetailActivity extends AppCompatActivity {
             }
         });
 
-        cartIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToCart();
-            }
-        });
+
 
         profileIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -247,7 +242,7 @@ public class TripDetailActivity extends AppCompatActivity {
     }
 
     private void openNotifications() {
-        Intent intent = new Intent(this, NotificationActivity.class);
+        Intent intent = new Intent(this, Notification.class);
         startActivity(intent);
     }
 
@@ -258,17 +253,14 @@ public class TripDetailActivity extends AppCompatActivity {
     }
 
     private void goToFavorites() {
-        Intent intent = new Intent(this, FavoritesActivity.class);
+        Intent intent = new Intent(this, FavoriteActivity.class);
         startActivity(intent);
     }
 
-    private void goToCart() {
-        Intent intent = new Intent(this, CartActivity.class);
-        startActivity(intent);
-    }
+
 
     private void goToProfile() {
-        Intent intent = new Intent(this, ProfileActivity.class);
+        Intent intent = new Intent(this, MyAccountActivity.class);
         startActivity(intent);
     }
 

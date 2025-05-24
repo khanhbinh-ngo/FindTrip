@@ -35,7 +35,8 @@
         <activity android:name=".ConfirmPasswordActivity" />
         <activity android:name=".HomePageActivity" />
         <activity android:name=".MyAccountActivity" />
-        <activity android:name=".TripDetailActivity"/>
+        <activity android:name=".TripDetailActivity" />
+        <activity android:name=".TripInfoActivity" />
     </application>
 
 </manifest>

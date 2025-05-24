@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail, etPassword;
-    private ImageButton btnTogglePassword, btnBack;
+    private ImageView btnTogglePassword, btnBack;
     private Button btnLogin;
     private TextView tvForgotPassword;
     private ConstraintLayout btnApple, btnFacebook, btnGoogle;
