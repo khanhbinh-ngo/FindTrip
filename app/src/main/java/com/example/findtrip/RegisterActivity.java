@@ -292,7 +292,7 @@ public class RegisterActivity extends AppCompatActivity {
                         public void run() {
                             Toast.makeText(RegisterActivity.this, "Apple login successful!", Toast.LENGTH_SHORT).show();
                             redirectToMainActivity(email);
-                            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                            Intent intent = new Intent(RegisterActivity.this, HomePageActivity.class);
                             startActivity(intent);
                         }
                     });
@@ -325,7 +325,7 @@ public class RegisterActivity extends AppCompatActivity {
                         public void run() {
                             Toast.makeText(RegisterActivity.this, "Facebook login successful!", Toast.LENGTH_SHORT).show();
                             redirectToMainActivity(email);
-                            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                            Intent intent = new Intent(RegisterActivity.this, HomePageActivity.class);
                             startActivity(intent);
                         }
                     });
@@ -357,7 +357,7 @@ public class RegisterActivity extends AppCompatActivity {
                         public void run() {
                             Toast.makeText(RegisterActivity.this, "Google login successful!", Toast.LENGTH_SHORT).show();
                             redirectToMainActivity(email);
-                            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                            Intent intent = new Intent(RegisterActivity.this, HomePageActivity.class);
                             startActivity(intent);
                         }
                     });
@@ -375,7 +375,7 @@ public class RegisterActivity extends AppCompatActivity {
         editor.apply();
 
         // Start MainActivity
-        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+        Intent intent = new Intent(RegisterActivity.this, HomePageActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }

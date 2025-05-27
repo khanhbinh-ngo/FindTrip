@@ -37,20 +37,28 @@ public class FavoriteActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        homeIcon.setOnClickListener(view -> {
-            Toast.makeText(this, "Trang chủ", Toast.LENGTH_SHORT).show();
+        homeIcon.setOnClickListener(v -> {
+            Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(FavoriteActivity.this, HomePageActivity.class);
+            startActivity(intent);
+            // Already on home, maybe refresh data
         });
 
-        favoritesIcon.setOnClickListener(view -> {
-            Toast.makeText(this, "Mục yêu thích", Toast.LENGTH_SHORT).show();
+        favoritesIcon.setOnClickListener(v -> {
+            Toast.makeText(this, "Favorites clicked", Toast.LENGTH_SHORT).show();
         });
 
-        cartIcon.setOnClickListener(view -> {
-            Toast.makeText(this, "Giỏ hàng", Toast.LENGTH_SHORT).show();
+        cartIcon.setOnClickListener(v -> {
+            Toast.makeText(this, "Cart clicked", Toast.LENGTH_SHORT).show();
+            // Navigate to cart activity
+            // Intent intent = new Intent(HomePageActivity.this, CartActivity.class);
+            // startActivity(intent);
         });
 
-        profileIcon.setOnClickListener(view -> {
-            Toast.makeText(this, "Hồ sơ cá nhân", Toast.LENGTH_SHORT).show();
+        profileIcon.setOnClickListener(v -> {
+            Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(FavoriteActivity.this, MyAccountActivity.class);
+            startActivity(intent);
         });
 
     }
